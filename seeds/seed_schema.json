@@ -12,7 +12,9 @@
         "shrine",
         "temple",
         "castle",
-        "garden"
+        "garden",
+        "museum",
+        "historic"
       ]
     },
     "city": {
