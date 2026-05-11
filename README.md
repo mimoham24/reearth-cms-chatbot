@@ -149,6 +149,27 @@ The chat CLI is **query-only**. Data is managed through the [Re:Earth CMS](https
 
 ---
 
+## Sample Data
+
+The `seeds/` directory contains ready-to-use files for importing test data into your CMS model via the Re:Earth CMS web interface.
+
+| File | Description |
+|---|---|
+| [`seeds/seed_content.json`](seeds/seed_content.json) | 100 Japanese heritage sites with name, category, city, description, and Point geometry |
+| [`seeds/seed_schema.json`](seeds/seed_schema.json) | The model schema these records were built against |
+
+### How to import
+
+1. Open your project in [Re:Earth CMS](https://cms.reearth.io)
+2. Navigate to your model
+3. Click **Import** and upload `seed_schema.json`
+4. Navigate to the content page
+5. Click **Import** and upload `seed_content.json`
+
+The records cover shrines, temples, castles, gardens, museums, and historic sites across 25+ cities including Tokyo, Kyoto, Nara, Osaka, Hiroshima, and Hokkaido.
+
+---
+
 ## How Intent Classification Works
 
 When `GROQ_API_KEY` is set, user input is sent to Groq's API to determine intent. If the key is missing or the API call fails, the tool falls back to keyword matching in Go — no external calls, no latency.

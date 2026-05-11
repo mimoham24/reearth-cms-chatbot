@@ -1,0 +1,40 @@
+{
+  "$id": "01kc62bkgd91wq5v995b7hqpty",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ttt",
+  "type": "object",
+  "properties": {
+    "category": {
+      "title": "Category",
+      "type": "string",
+      "x-fieldType": "select",
+      "x-options": [
+        "shrine",
+        "temple",
+        "castle",
+        "garden"
+      ]
+    },
+    "city": {
+      "title": "City",
+      "type": "string",
+      "x-fieldType": "text"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string",
+      "x-fieldType": "text"
+    },
+    "location": {
+      "title": "Location",
+      "type": "object",
+      "x-fieldType": "geometryEditor",
+      "x-geoSupportedType": "POINT"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string",
+      "x-fieldType": "text"
+    }
+  }
+}

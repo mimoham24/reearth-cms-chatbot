@@ -1,0 +1,1302 @@
+[
+  {
+    "name": "Senso-ji Temple",
+    "category": "temple",
+    "city": "Tokyo",
+    "description": "Tokyo's oldest temple, founded in 628 AD",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.7967,
+        35.7148
+      ]
+    }
+  },
+  {
+    "name": "Meiji Shrine",
+    "category": "shrine",
+    "city": "Tokyo",
+    "description": "Shinto shrine dedicated to Emperor Meiji",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.6993,
+        35.6763
+      ]
+    }
+  },
+  {
+    "name": "Shinjuku Gyoen",
+    "category": "garden",
+    "city": "Tokyo",
+    "description": "Large national garden blending French and English styles",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.71,
+        35.6852
+      ]
+    }
+  },
+  {
+    "name": "Ueno Park",
+    "category": "garden",
+    "city": "Tokyo",
+    "description": "Famous park housing multiple museums and a zoo",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.7714,
+        35.7146
+      ]
+    }
+  },
+  {
+    "name": "Yasukuni Shrine",
+    "category": "shrine",
+    "city": "Tokyo",
+    "description": "Shinto shrine commemorating Japan's war dead",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.7433,
+        35.6938
+      ]
+    }
+  },
+  {
+    "name": "Hamarikyu Gardens",
+    "category": "garden",
+    "city": "Tokyo",
+    "description": "Tidal garden with teahouse surrounded by skyscrapers",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.7635,
+        35.6597
+      ]
+    }
+  },
+  {
+    "name": "Nezu Shrine",
+    "category": "shrine",
+    "city": "Tokyo",
+    "description": "One of Tokyo's oldest shrines with torii-lined paths",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.7598,
+        35.7208
+      ]
+    }
+  },
+  {
+    "name": "Yanaka Cemetery",
+    "category": "historic",
+    "city": "Tokyo",
+    "description": "Historic cemetery with old temples and cherry blossoms",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.7706,
+        35.7261
+      ]
+    }
+  },
+  {
+    "name": "Edo-Tokyo Museum",
+    "category": "museum",
+    "city": "Tokyo",
+    "description": "Museum showcasing the history of Tokyo from Edo period",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.7966,
+        35.6966
+      ]
+    }
+  },
+  {
+    "name": "Imperial Palace East Garden",
+    "category": "garden",
+    "city": "Tokyo",
+    "description": "Former site of Edo Castle's innermost citadel",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.7581,
+        35.6863
+      ]
+    }
+  },
+  {
+    "name": "Fushimi Inari Shrine",
+    "category": "shrine",
+    "city": "Kyoto",
+    "description": "Famous for thousands of vermillion torii gates",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7727,
+        34.9671
+      ]
+    }
+  },
+  {
+    "name": "Kinkaku-ji Temple",
+    "category": "temple",
+    "city": "Kyoto",
+    "description": "The Golden Pavilion, covered in gold leaf",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7292,
+        35.0394
+      ]
+    }
+  },
+  {
+    "name": "Ginkaku-ji Temple",
+    "category": "temple",
+    "city": "Kyoto",
+    "description": "The Silver Pavilion with zen garden",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7982,
+        35.0269
+      ]
+    }
+  },
+  {
+    "name": "Ryoan-ji Temple",
+    "category": "temple",
+    "city": "Kyoto",
+    "description": "Famous for its enigmatic rock garden",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7178,
+        35.0345
+      ]
+    }
+  },
+  {
+    "name": "Kiyomizu-dera Temple",
+    "category": "temple",
+    "city": "Kyoto",
+    "description": "Iconic temple with wooden stage over a hillside",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.785,
+        34.9949
+      ]
+    }
+  },
+  {
+    "name": "Nijo Castle",
+    "category": "castle",
+    "city": "Kyoto",
+    "description": "Flatland castle of the Tokugawa shoguns",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.748,
+        35.0142
+      ]
+    }
+  },
+  {
+    "name": "Arashiyama Bamboo Grove",
+    "category": "garden",
+    "city": "Kyoto",
+    "description": "Towering bamboo forest in the Arashiyama district",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.6726,
+        35.0094
+      ]
+    }
+  },
+  {
+    "name": "Tenryu-ji Temple",
+    "category": "temple",
+    "city": "Kyoto",
+    "description": "UNESCO World Heritage Zen temple with pond garden",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.6753,
+        35.0153
+      ]
+    }
+  },
+  {
+    "name": "Philosopher's Path",
+    "category": "historic",
+    "city": "Kyoto",
+    "description": "Canal-side stone path lined with cherry trees",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7982,
+        35.02
+      ]
+    }
+  },
+  {
+    "name": "Heian Shrine",
+    "category": "shrine",
+    "city": "Kyoto",
+    "description": "Shrine built to commemorate Kyoto's 1100th anniversary",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7824,
+        35.016
+      ]
+    }
+  },
+  {
+    "name": "Nishiki Market",
+    "category": "historic",
+    "city": "Kyoto",
+    "description": "Narrow shopping street known as Kyoto's Kitchen",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7654,
+        35.005
+      ]
+    }
+  },
+  {
+    "name": "Daitoku-ji Temple",
+    "category": "temple",
+    "city": "Kyoto",
+    "description": "Zen temple complex with 24 sub-temples",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.746,
+        35.0437
+      ]
+    }
+  },
+  {
+    "name": "Sanjusangen-do Temple",
+    "category": "temple",
+    "city": "Kyoto",
+    "description": "Hall with 1001 statues of Thousand-armed Kannon",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7739,
+        34.9882
+      ]
+    }
+  },
+  {
+    "name": "Pontocho Alley",
+    "category": "historic",
+    "city": "Kyoto",
+    "description": "Narrow alley famous for traditional restaurants",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7716,
+        35.0057
+      ]
+    }
+  },
+  {
+    "name": "Todai-ji Temple",
+    "category": "temple",
+    "city": "Nara",
+    "description": "Houses Japan's largest bronze Buddha statue",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.8398,
+        34.6888
+      ]
+    }
+  },
+  {
+    "name": "Kasuga Taisha Shrine",
+    "category": "shrine",
+    "city": "Nara",
+    "description": "Famous for its thousands of bronze and stone lanterns",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.848,
+        34.6813
+      ]
+    }
+  },
+  {
+    "name": "Nara Park",
+    "category": "garden",
+    "city": "Nara",
+    "description": "Expansive park home to hundreds of freely roaming deer",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.8432,
+        34.6851
+      ]
+    }
+  },
+  {
+    "name": "Horyu-ji Temple",
+    "category": "temple",
+    "city": "Nara",
+    "description": "World's oldest surviving wooden structures",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7345,
+        34.6147
+      ]
+    }
+  },
+  {
+    "name": "Isuien Garden",
+    "category": "garden",
+    "city": "Nara",
+    "description": "Traditional Japanese garden with views of Todai-ji",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.8442,
+        34.6841
+      ]
+    }
+  },
+  {
+    "name": "Kofuku-ji Temple",
+    "category": "temple",
+    "city": "Nara",
+    "description": "Five-story pagoda that is a symbol of Nara",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.8319,
+        34.6815
+      ]
+    }
+  },
+  {
+    "name": "Osaka Castle",
+    "category": "castle",
+    "city": "Osaka",
+    "description": "Iconic castle that played a major role in unification of Japan",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.5259,
+        34.6873
+      ]
+    }
+  },
+  {
+    "name": "Sumiyoshi Taisha Shrine",
+    "category": "shrine",
+    "city": "Osaka",
+    "description": "One of the oldest Shinto shrines in Japan",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.493,
+        34.6132
+      ]
+    }
+  },
+  {
+    "name": "Shitenno-ji Temple",
+    "category": "temple",
+    "city": "Osaka",
+    "description": "One of Japan's oldest Buddhist temples",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.5163,
+        34.6538
+      ]
+    }
+  },
+  {
+    "name": "Namba Yasaka Shrine",
+    "category": "shrine",
+    "city": "Osaka",
+    "description": "Shrine famous for its giant lion-head stage",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.5019,
+        34.667
+      ]
+    }
+  },
+  {
+    "name": "Expo '70 Commemorative Park",
+    "category": "garden",
+    "city": "Osaka",
+    "description": "Large park built on the site of the 1970 World Exposition",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.5376,
+        34.8054
+      ]
+    }
+  },
+  {
+    "name": "Itsukushima Shrine",
+    "category": "shrine",
+    "city": "Hiroshima",
+    "description": "Famous floating torii gate on the sea",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        132.3197,
+        34.296
+      ]
+    }
+  },
+  {
+    "name": "Hiroshima Peace Memorial",
+    "category": "historic",
+    "city": "Hiroshima",
+    "description": "UNESCO site preserving the A-Bomb Dome",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        132.4532,
+        34.3955
+      ]
+    }
+  },
+  {
+    "name": "Shukkeien Garden",
+    "category": "garden",
+    "city": "Hiroshima",
+    "description": "Miniature landscape garden dating from 1620",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        132.4598,
+        34.3979
+      ]
+    }
+  },
+  {
+    "name": "Mitaki-dera Temple",
+    "category": "temple",
+    "city": "Hiroshima",
+    "description": "Temple complex nestled in a forested hillside",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        132.4333,
+        34.4069
+      ]
+    }
+  },
+  {
+    "name": "Kenroku-en Garden",
+    "category": "garden",
+    "city": "Kanazawa",
+    "description": "One of Japan's three great gardens",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        136.6621,
+        36.5613
+      ]
+    }
+  },
+  {
+    "name": "Kanazawa Castle",
+    "category": "castle",
+    "city": "Kanazawa",
+    "description": "Reconstructed castle at the heart of Kanazawa",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        136.6569,
+        36.5614
+      ]
+    }
+  },
+  {
+    "name": "Oyama Shrine",
+    "category": "shrine",
+    "city": "Kanazawa",
+    "description": "Shrine with a unique gate blending Japanese and Western styles",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        136.6549,
+        36.5648
+      ]
+    }
+  },
+  {
+    "name": "Higashi Chaya District",
+    "category": "historic",
+    "city": "Kanazawa",
+    "description": "Preserved geisha district with traditional tea houses",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        136.664,
+        36.5706
+      ]
+    }
+  },
+  {
+    "name": "Myoryu-ji Temple",
+    "category": "temple",
+    "city": "Kanazawa",
+    "description": "Ninja temple famous for its hidden rooms and traps",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        136.6485,
+        36.5566
+      ]
+    }
+  },
+  {
+    "name": "Himeji Castle",
+    "category": "castle",
+    "city": "Himeji",
+    "description": "Best preserved castle in Japan, UNESCO World Heritage",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        134.6939,
+        34.8394
+      ]
+    }
+  },
+  {
+    "name": "Koko-en Garden",
+    "category": "garden",
+    "city": "Himeji",
+    "description": "Nine separate gardens built on former samurai quarters",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        134.6887,
+        34.8367
+      ]
+    }
+  },
+  {
+    "name": "Engyoji Temple",
+    "category": "temple",
+    "city": "Himeji",
+    "description": "Mountain temple accessible by ropeway",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        134.7258,
+        34.862
+      ]
+    }
+  },
+  {
+    "name": "Tosho-gu Shrine",
+    "category": "shrine",
+    "city": "Nikko",
+    "description": "Lavishly decorated shrine of Tokugawa Ieyasu",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.5983,
+        36.758
+      ]
+    }
+  },
+  {
+    "name": "Rinno-ji Temple",
+    "category": "temple",
+    "city": "Nikko",
+    "description": "Buddhist temple with three gilded Buddha statues",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.5979,
+        36.7571
+      ]
+    }
+  },
+  {
+    "name": "Nikko Futarasan Shrine",
+    "category": "shrine",
+    "city": "Nikko",
+    "description": "Ancient shrine at the base of sacred Mt. Nantai",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.5997,
+        36.7566
+      ]
+    }
+  },
+  {
+    "name": "Shinkyo Bridge",
+    "category": "historic",
+    "city": "Nikko",
+    "description": "Sacred vermilion lacquered bridge over the Daiya River",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.6011,
+        36.7523
+      ]
+    }
+  },
+  {
+    "name": "Kegon Falls",
+    "category": "historic",
+    "city": "Nikko",
+    "description": "One of Japan's most spectacular waterfalls at 97m",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.5192,
+        36.7556
+      ]
+    }
+  },
+  {
+    "name": "Kotoku-in Great Buddha",
+    "category": "temple",
+    "city": "Kamakura",
+    "description": "Giant outdoor bronze Buddha statue from 1252",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.5354,
+        35.3167
+      ]
+    }
+  },
+  {
+    "name": "Tsurugaoka Hachimangu Shrine",
+    "category": "shrine",
+    "city": "Kamakura",
+    "description": "Kamakura's most important shrine dedicated to Hachiman",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.5565,
+        35.3258
+      ]
+    }
+  },
+  {
+    "name": "Engaku-ji Temple",
+    "category": "temple",
+    "city": "Kamakura",
+    "description": "Important Zen temple founded in 1282",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.5415,
+        35.3382
+      ]
+    }
+  },
+  {
+    "name": "Hokoku-ji Temple",
+    "category": "temple",
+    "city": "Kamakura",
+    "description": "Zen temple famous for its bamboo grove",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.5845,
+        35.3138
+      ]
+    }
+  },
+  {
+    "name": "Zeniarai Benzaiten Shrine",
+    "category": "shrine",
+    "city": "Kamakura",
+    "description": "Shrine where washing money is said to double it",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.5381,
+        35.3261
+      ]
+    }
+  },
+  {
+    "name": "Matsumoto Castle",
+    "category": "castle",
+    "city": "Matsumoto",
+    "description": "One of Japan's premier original historic castles",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        137.9719,
+        36.2381
+      ]
+    }
+  },
+  {
+    "name": "Nawate Street",
+    "category": "historic",
+    "city": "Matsumoto",
+    "description": "Old shopping street along the Metoba River",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        137.9733,
+        36.2348
+      ]
+    }
+  },
+  {
+    "name": "Kaichi School",
+    "category": "historic",
+    "city": "Matsumoto",
+    "description": "Oldest surviving Western-style school building in Japan",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        137.9739,
+        36.2415
+      ]
+    }
+  },
+  {
+    "name": "Nagoya Castle",
+    "category": "castle",
+    "city": "Nagoya",
+    "description": "Reconstructed castle famous for its golden shachihoko",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        136.8998,
+        35.1856
+      ]
+    }
+  },
+  {
+    "name": "Atsuta Shrine",
+    "category": "shrine",
+    "city": "Nagoya",
+    "description": "One of Japan's most important shrines housing the Kusanagi sword",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        136.9085,
+        35.128
+      ]
+    }
+  },
+  {
+    "name": "Tokugawa Art Museum",
+    "category": "museum",
+    "city": "Nagoya",
+    "description": "Museum housing the Tokugawa clan's treasures",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        136.9289,
+        35.1748
+      ]
+    }
+  },
+  {
+    "name": "Hakone Shrine",
+    "category": "shrine",
+    "city": "Hakone",
+    "description": "Lakeside shrine with a famous floating torii gate",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.0248,
+        35.2006
+      ]
+    }
+  },
+  {
+    "name": "Hakone Open-Air Museum",
+    "category": "museum",
+    "city": "Hakone",
+    "description": "Japan's first open-air art museum with mountain backdrop",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.0523,
+        35.2504
+      ]
+    }
+  },
+  {
+    "name": "Zuihoden Mausoleum",
+    "category": "historic",
+    "city": "Sendai",
+    "description": "Ornate mausoleum of Date Masamune, the one-eyed dragon",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        140.8731,
+        38.2476
+      ]
+    }
+  },
+  {
+    "name": "Osaki Hachimangu Shrine",
+    "category": "shrine",
+    "city": "Sendai",
+    "description": "National treasure shrine with lacquered black architecture",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        140.8617,
+        38.2698
+      ]
+    }
+  },
+  {
+    "name": "Rinno-ji Temple Sendai",
+    "category": "temple",
+    "city": "Sendai",
+    "description": "Zen temple with a beautiful garden in Sendai",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        140.8698,
+        38.2664
+      ]
+    }
+  },
+  {
+    "name": "Tsuruga Castle",
+    "category": "castle",
+    "city": "Aizu-Wakamatsu",
+    "description": "Reconstructed castle famous for its red-tiled roof",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.931,
+        37.4938
+      ]
+    }
+  },
+  {
+    "name": "Oyaku-en Garden",
+    "category": "garden",
+    "city": "Aizu-Wakamatsu",
+    "description": "Medicinal herb garden from the feudal era",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        139.9243,
+        37.4975
+      ]
+    }
+  },
+  {
+    "name": "Matsue Castle",
+    "category": "castle",
+    "city": "Matsue",
+    "description": "One of Japan's few remaining original castles, Black Castle",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        133.0503,
+        35.4726
+      ]
+    }
+  },
+  {
+    "name": "Adachi Museum of Art Garden",
+    "category": "garden",
+    "city": "Yasugi",
+    "description": "Garden repeatedly voted Japan's most beautiful",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        132.8883,
+        35.3667
+      ]
+    }
+  },
+  {
+    "name": "Izumo Taisha Shrine",
+    "category": "shrine",
+    "city": "Izumo",
+    "description": "One of Japan's oldest and most important shrines",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        132.6851,
+        35.4018
+      ]
+    }
+  },
+  {
+    "name": "Dazaifu Tenmangu Shrine",
+    "category": "shrine",
+    "city": "Dazaifu",
+    "description": "Shrine dedicated to the god of learning, Sugawara no Michizane",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        130.5333,
+        33.5203
+      ]
+    }
+  },
+  {
+    "name": "Fukuoka Castle Ruins",
+    "category": "castle",
+    "city": "Fukuoka",
+    "description": "Ruins of the largest castle in Kyushu",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        130.383,
+        33.5872
+      ]
+    }
+  },
+  {
+    "name": "Kushida Shrine",
+    "category": "shrine",
+    "city": "Fukuoka",
+    "description": "Hakata's most beloved shrine, home of the Yamakasa festival",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        130.4072,
+        33.5961
+      ]
+    }
+  },
+  {
+    "name": "Kumamoto Castle",
+    "category": "castle",
+    "city": "Kumamoto",
+    "description": "One of Japan's most impressive castles, currently under restoration",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        130.7059,
+        32.8063
+      ]
+    }
+  },
+  {
+    "name": "Suizenji Jojuen Garden",
+    "category": "garden",
+    "city": "Kumamoto",
+    "description": "Garden with miniature Mt. Fuji replica",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        130.7274,
+        32.7837
+      ]
+    }
+  },
+  {
+    "name": "Glover Garden",
+    "category": "historic",
+    "city": "Nagasaki",
+    "description": "Open-air museum of Western-style homes from the Meiji era",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        129.8728,
+        32.7291
+      ]
+    }
+  },
+  {
+    "name": "Sofuku-ji Temple",
+    "category": "temple",
+    "city": "Nagasaki",
+    "description": "Chinese-style Buddhist temple built in 1629",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        129.8731,
+        32.7447
+      ]
+    }
+  },
+  {
+    "name": "Suwa Shrine Nagasaki",
+    "category": "shrine",
+    "city": "Nagasaki",
+    "description": "Nagasaki's largest shrine hosting the famous Kunchi festival",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        129.8784,
+        32.7501
+      ]
+    }
+  },
+  {
+    "name": "Sengan-en Garden",
+    "category": "garden",
+    "city": "Kagoshima",
+    "description": "Garden with Mt. Sakurajima as borrowed scenery",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        130.5739,
+        31.6179
+      ]
+    }
+  },
+  {
+    "name": "Terukuni Shrine",
+    "category": "shrine",
+    "city": "Kagoshima",
+    "description": "Shrine dedicated to the Shimazu clan lord",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        130.5573,
+        31.5912
+      ]
+    }
+  },
+  {
+    "name": "Hokkaido Shrine",
+    "category": "shrine",
+    "city": "Sapporo",
+    "description": "Most important shrine in Hokkaido with cherry blossom park",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        141.321,
+        43.0584
+      ]
+    }
+  },
+  {
+    "name": "Sapporo Clock Tower",
+    "category": "historic",
+    "city": "Sapporo",
+    "description": "Symbol of Sapporo, built in 1878 in American-style",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        141.3538,
+        43.0606
+      ]
+    }
+  },
+  {
+    "name": "Goryokaku Fort",
+    "category": "castle",
+    "city": "Hakodate",
+    "description": "Star-shaped Western-style fort from the Meiji era",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        140.7567,
+        41.7964
+      ]
+    }
+  },
+  {
+    "name": "Hakodate Higashi Honganji Temple",
+    "category": "temple",
+    "city": "Hakodate",
+    "description": "Temple with concrete architecture rare in Japanese temples",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        140.7261,
+        41.7755
+      ]
+    }
+  },
+  {
+    "name": "Higashiyama Walking Course",
+    "category": "historic",
+    "city": "Takayama",
+    "description": "Historic path linking temples and shrines on the east mountain",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        137.2557,
+        36.1432
+      ]
+    }
+  },
+  {
+    "name": "Hida Kokubun-ji Temple",
+    "category": "temple",
+    "city": "Takayama",
+    "description": "Takayama's oldest temple with a three-story pagoda",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        137.2506,
+        36.1468
+      ]
+    }
+  },
+  {
+    "name": "Sakurayama Hachimangu Shrine",
+    "category": "shrine",
+    "city": "Takayama",
+    "description": "Shrine housing the famous Takayama Festival floats",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        137.2576,
+        36.1502
+      ]
+    }
+  },
+  {
+    "name": "Kongobu-ji Temple",
+    "category": "temple",
+    "city": "Koya-san",
+    "description": "Head temple of Shingon Buddhism on sacred Mt. Koya",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.5831,
+        34.214
+      ]
+    }
+  },
+  {
+    "name": "Okunoin Cemetery",
+    "category": "historic",
+    "city": "Koya-san",
+    "description": "Japan's largest cemetery with 200,000 tombstones in cedar forest",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.5919,
+        34.214
+      ]
+    }
+  },
+  {
+    "name": "Danjo Garan Complex",
+    "category": "temple",
+    "city": "Koya-san",
+    "description": "Sacred temple complex at the heart of Koya-san",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.5785,
+        34.2133
+      ]
+    }
+  },
+  {
+    "name": "Byodo-in Temple",
+    "category": "temple",
+    "city": "Uji",
+    "description": "UNESCO temple depicted on the 10-yen coin, built in 1053",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.8081,
+        34.8939
+      ]
+    }
+  },
+  {
+    "name": "Ujigami Shrine",
+    "category": "shrine",
+    "city": "Uji",
+    "description": "Japan's oldest surviving Shinto shrine, UNESCO World Heritage",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.8097,
+        34.8935
+      ]
+    }
+  },
+  {
+    "name": "Eikan-do Zenrin-ji Temple",
+    "category": "temple",
+    "city": "Kyoto",
+    "description": "Famous for autumn foliage and a unique backward-looking Buddha",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7947,
+        35.0141
+      ]
+    }
+  },
+  {
+    "name": "Fushimi Momoyama Castle",
+    "category": "castle",
+    "city": "Kyoto",
+    "description": "Reconstructed castle of Toyotomi Hideyoshi on a forested hill",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.773,
+        34.9367
+      ]
+    }
+  },
+  {
+    "name": "Nishiki Tenmangu Shrine",
+    "category": "shrine",
+    "city": "Kyoto",
+    "description": "Compact shrine tucked into Nishiki Market, known as the lucky shrine",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.7656,
+        35.0052
+      ]
+    }
+  },
+  {
+    "name": "Kokedera Moss Temple",
+    "category": "temple",
+    "city": "Kyoto",
+    "description": "UNESCO temple famous for its carpet of over 120 moss varieties",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        135.682,
+        35.0142
+      ]
+    }
+  },
+  {
+    "name": "Zuigan-ji Temple",
+    "category": "temple",
+    "city": "Matsushima",
+    "description": "Finest Zen temple in Tohoku, built by Date Masamune",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        141.0694,
+        38.3192
+      ]
+    }
+  }
+]
