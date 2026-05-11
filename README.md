@@ -55,7 +55,9 @@ CGO_ENABLED=0 go build -o cms-chat .
 
 ---
 
-## Usage
+## Using the Chatbot
+
+Once running, you'll see a prompt where you can type freely in natural language:
 
 ```
  Re:Earth CMS Chat
@@ -71,24 +73,77 @@ Commands you can try:
   search for Tokyo
   exit
 
-You: show all items
-Thinking...
+You: █
+```
 
-Fetched 3 / 3 items:
+### Listing items
+
+```
+You: show all items
+
+Fetched 10 / 10 items:
 
 1. abc123def   [published]
    name:                Senso-ji Temple
    category:            temple
    city:                Tokyo
+   description:         Tokyo's oldest temple, founded in 628 AD
+
+2. ghi456jkl   [published]
+   name:                Himeji Castle
+   category:            castle
+   city:                Himeji
+   ...
 ```
+
+### Listing models and schema
+
+```
+You: what models do we have?
+
+2 model(s):
+
+  landmarks  key: landmarks
+    name:                text
+    category:            text
+    city:                text
+    description:         textArea
+    location:            geometryObject
+```
+
+### Searching
+
+```
+You: find items in Kyoto
+
+Search "Kyoto" — 2 / 10 items:
+
+1. def789abc   [published]
+   name:                Fushimi Inari Shrine
+   city:                Kyoto
+   ...
+```
+
+### Exiting
+
+```
+You: exit
+Goodbye!
+```
+
+You can also type `quit` or `q`.
+
+---
 
 ## Supported Queries
 
-| What you type | Intent | API call |
-|---|---|---|
-| "show items", "list data", "what records do we have?" | `LIST_ITEMS` | `GET /models/{model}/items` |
-| "list models", "show schema", "what fields exist?" | `LIST_MODELS` | `GET /projects/{project}/models` |
-| "search for Tokyo", "find shrines" | `SEARCH_ITEMS` | `GET /items?keyword=...` |
+The chatbot understands natural language variations. Some examples:
+
+| Goal | Example phrases |
+|---|---|
+| List all items | "show all items", "what data do we have?", "list records" |
+| Show schema | "list models", "what fields exist?", "show schema" |
+| Search | "search for Tokyo", "find shrines", "items in Kyoto" |
 
 The chat CLI is **query-only**. Data is managed through the [Re:Earth CMS](https://cms.reearth.io) web interface.
 
@@ -107,7 +162,7 @@ When `GROQ_API_KEY` is set, user input is sent to Groq's API to determine intent
 
 ## API Reference
 
-Base URL: `https://api.cms.reearth.io`  
+Base URL: `https://api.cms.reearth.io/api`  
 Auth: `Authorization: Bearer {CMS_TOKEN}`
 
 | Method | Path | Used for |

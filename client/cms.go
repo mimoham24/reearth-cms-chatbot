@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-const BaseURL = "https://api.cms.reearth.io"
+const BaseURL = "https://api.cms.reearth.io/api"
 
 type Client struct {
 	token     string
