@@ -2,7 +2,7 @@
 
 A Go-based toolset for interacting with [Re:Earth CMS](https://cms.reearth.io) from the terminal. It includes two standalone tools:
 
-1. **`cms-chat`** — a conversational CLI that lets you query and manage CMS data in natural language
+1. **`cms-chat`** — a conversational CLI that lets you query and explore CMS data in natural language
 2. **`cms-seed`** — a one-shot seeder that imports a predefined dataset into your CMS model via the Import API
 
 Both tools use only the Go standard library — no external dependencies.
@@ -33,6 +33,10 @@ Both tools use only the Go standard library — no external dependencies.
 
 Type natural language into your terminal and the tool routes your request to the correct CMS API endpoint, then renders the response in a clean, color-coded format.
 
+The chat CLI is **query-only**. Data is managed through two other channels:
+- **`cms-seed`** — bulk-imports the predefined dataset via the Import API
+- **Re:Earth CMS** — the web interface for ongoing content management
+
 ```
  Re:Earth CMS Chat
 ────────────────────────────────────────
@@ -45,7 +49,6 @@ Commands you can try:
   show all items
   list models
   search for Tokyo
-  create item title="New Place" description="A location"
   exit
 
 You: show all items
@@ -72,9 +75,6 @@ When `GROQ_API_KEY` is set, the CLI sends the user's input to Groq's API (`llama
 | "show items", "list data", "what do we have?" | `LIST_ITEMS` | `GET /models/{model}/items` |
 | "list models", "show schema", "what fields exist?" | `LIST_MODELS` | `GET /projects/{project}/models` |
 | "search for Tokyo", "find items about shrines" | `SEARCH_ITEMS` | `GET /items?keyword=...` |
-| "create item title=\"X\"", "add new record" | `CREATE_ITEM` | `POST /models/{model}/items` |
-
-For `CREATE_ITEM`, when Groq is available the tool fetches the model's schema and asks the LLM to extract field values from the user's sentence. Without Groq, it parses `key="value"` pairs directly from the input using regex.
 
 ### Supported Commands
 
@@ -83,7 +83,6 @@ For `CREATE_ITEM`, when Groq is available the tool fetches the model's schema an
 | `show all items` | Lists items with field values and status badges |
 | `list models` | Shows all models with their field schemas |
 | `search for Kyoto` | Filters items by keyword |
-| `create item name="X" category="temple"` | Creates a new CMS item |
 | `exit` / `quit` / `q` | Exits the CLI |
 
 ### Setup
@@ -221,10 +220,8 @@ Base URL: `https://api.cms.reearth.io`
 | Method | Path | Used by |
 |---|---|---|
 | `GET` | `/{ws}/projects/{proj}/models` | LIST_MODELS, connection test |
-| `GET` | `/{ws}/projects/{proj}/models/{model}` | CREATE_ITEM (schema fetch) |
 | `GET` | `/{ws}/projects/{proj}/models/{model}/items` | LIST_ITEMS |
 | `GET` | `/{ws}/projects/{proj}/models/{model}/items?keyword=` | SEARCH_ITEMS |
-| `POST` | `/{ws}/projects/{proj}/models/{model}/items` | CREATE_ITEM |
 | `PUT` | `/{ws}/projects/{proj}/models/{model}/import` | seeder |
 
 All requests use `Authorization: Bearer {CMS_TOKEN}`.
