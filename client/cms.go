@@ -77,23 +77,6 @@ type ModelsResponse struct {
 	Models []Model `json:"models"`
 }
 
-type FieldInput struct {
-	Key   string      `json:"key"`
-	Value interface{} `json:"value"`
-}
-
-type CreateItemRequest struct {
-	Fields []FieldInput `json:"fields"`
-}
-
-type VersionedItem struct {
-	ID        string   `json:"id"`
-	Version   string   `json:"version"`
-	Refs      []string `json:"refs"`
-	Fields    []Field  `json:"fields"`
-	CreatedAt string   `json:"createdAt"`
-	UpdatedAt string   `json:"updatedAt"`
-}
 
 // --- HTTP helper ---
 
@@ -164,38 +147,6 @@ func (c *Client) GetModels() (*ModelsResponse, error) {
 	}
 	var result ModelsResponse
 	if err := json.Unmarshal(body, &result); err != nil {
-		return nil, fmt.Errorf("parse error: %w", err)
-	}
-	return &result, nil
-}
-
-// GetModel fetches the schema for the currently configured model.
-func (c *Client) GetModel() (*Model, error) {
-	path := fmt.Sprintf("/%s/projects/%s/models/%s", c.workspace, c.project, c.model)
-	body, err := c.do("GET", path, nil)
-	if err != nil {
-		return nil, err
-	}
-	var result Model
-	if err := json.Unmarshal(body, &result); err != nil {
-		return nil, fmt.Errorf("parse error: %w", err)
-	}
-	return &result, nil
-}
-
-func (c *Client) CreateItem(fields []FieldInput) (*VersionedItem, error) {
-	path := fmt.Sprintf("/%s/projects/%s/models/%s/items",
-		c.workspace, c.project, c.model)
-	bodyBytes, err := json.Marshal(CreateItemRequest{Fields: fields})
-	if err != nil {
-		return nil, err
-	}
-	respBytes, err := c.do("POST", path, bodyBytes)
-	if err != nil {
-		return nil, err
-	}
-	var result VersionedItem
-	if err := json.Unmarshal(respBytes, &result); err != nil {
 		return nil, fmt.Errorf("parse error: %w", err)
 	}
 	return &result, nil

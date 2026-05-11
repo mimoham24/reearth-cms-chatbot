@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"regexp"
 	"strings"
 	"time"
 )
@@ -77,12 +76,10 @@ func (h *Handler) classifyIntent(input string) string {
 	system := `Classify the user's CMS request. Respond with EXACTLY one of these words — nothing else:
 LIST_ITEMS
 LIST_MODELS
-CREATE_ITEM
 SEARCH_ITEMS
 
 LIST_ITEMS:   show/list/get items, data, records, content
 LIST_MODELS:  show/list models, schema, structure, fields
-CREATE_ITEM:  create/add/insert a new item or record
 SEARCH_ITEMS: search/find/filter items by keyword or value`
 
 	result, err := h.askGroq(system, input, 10)
@@ -94,7 +91,7 @@ SEARCH_ITEMS: search/find/filter items by keyword or value`
 
 func isValidIntent(s string) bool {
 	switch strings.TrimSpace(s) {
-	case "LIST_ITEMS", "LIST_MODELS", "CREATE_ITEM", "SEARCH_ITEMS":
+	case "LIST_ITEMS", "LIST_MODELS", "SEARCH_ITEMS":
 		return true
 	}
 	return false
@@ -103,11 +100,6 @@ func isValidIntent(s string) bool {
 // classifyKeywords is a pure-Go fallback intent classifier.
 func classifyKeywords(input string) string {
 	lower := strings.ToLower(input)
-	for _, kw := range []string{"create", "add", "insert", "new item", "new record"} {
-		if strings.Contains(lower, kw) {
-			return "CREATE_ITEM"
-		}
-	}
 	for _, kw := range []string{"search", "find", "filter", "look for"} {
 		if strings.Contains(lower, kw) {
 			return "SEARCH_ITEMS"
@@ -146,58 +138,9 @@ func (h *Handler) executeAction(intent, originalInput string) (string, error) {
 		}
 		return formatSearchResults(result, keyword), nil
 
-	case "CREATE_ITEM":
-		fields, err := h.resolveFields(originalInput)
-		if err != nil {
-			return "", err
-		}
-		if len(fields) == 0 {
-			return colorYellow + `No fields found. Try: create item title="New Place" description="A location"` + colorReset + "\n", nil
-		}
-		item, err := h.cms.CreateItem(fields)
-		if err != nil {
-			return "", err
-		}
-		return formatCreatedItem(item), nil
-
 	default:
 		return "", fmt.Errorf("unknown intent: %q", intent)
 	}
-}
-
-// resolveFields uses Groq + model schema when available; falls back to regex.
-func (h *Handler) resolveFields(input string) ([]client.FieldInput, error) {
-	if h.groqKey == "" {
-		return parseFields(input), nil
-	}
-
-	model, err := h.cms.GetModel()
-	if err != nil {
-		return parseFields(input), nil // can't fetch schema, use regex
-	}
-
-	var schemaDesc strings.Builder
-	schemaDesc.WriteString("Available fields:\n")
-	for _, f := range model.Schema.Fields {
-		schemaDesc.WriteString(fmt.Sprintf("  key=%-20q type=%s\n", f.Key, f.Type))
-	}
-
-	system := `Extract CMS field values from the user's request.
-` + schemaDesc.String() + `
-Respond with ONLY a valid JSON array: [{"key":"field_key","value":"field_value"}]
-Only include fields the user mentioned. No explanation, no markdown fences.`
-
-	raw, err := h.askGroq(system, input, 300)
-	if err != nil {
-		return parseFields(input), nil
-	}
-
-	raw = cleanJSON(raw)
-	var fields []client.FieldInput
-	if err := json.Unmarshal([]byte(raw), &fields); err != nil {
-		return parseFields(input), nil // malformed JSON, use regex
-	}
-	return fields, nil
 }
 
 // askGroq sends a chat completion request to Groq's OpenAI-compatible API.
@@ -246,15 +189,6 @@ func (h *Handler) askGroq(system, userMsg string, maxTokens int) (string, error)
 	return strings.TrimSpace(result.Choices[0].Message.Content), nil
 }
 
-// cleanJSON strips markdown code fences that LLMs sometimes add.
-func cleanJSON(s string) string {
-	s = strings.TrimSpace(s)
-	s = strings.TrimPrefix(s, "```json")
-	s = strings.TrimPrefix(s, "```")
-	s = strings.TrimSuffix(s, "```")
-	return strings.TrimSpace(s)
-}
-
 // extractKeyword pulls the search term from "search for X" style queries.
 func extractKeyword(input string) string {
 	lower := strings.ToLower(input)
@@ -272,28 +206,6 @@ func extractKeyword(input string) string {
 		return words[len(words)-1]
 	}
 	return input
-}
-
-// parseFields extracts key="value" pairs via regex (fallback for no Groq key).
-var (
-	quotedFieldRe   = regexp.MustCompile(`(\w+)="([^"]*)"`)
-	unquotedFieldRe = regexp.MustCompile(`(\w+)=(\S+)`)
-)
-
-func parseFields(input string) []client.FieldInput {
-	seen := map[string]bool{}
-	var fields []client.FieldInput
-	for _, m := range quotedFieldRe.FindAllStringSubmatch(input, -1) {
-		seen[m[1]] = true
-		fields = append(fields, client.FieldInput{Key: m[1], Value: m[2]})
-	}
-	for _, m := range unquotedFieldRe.FindAllStringSubmatch(input, -1) {
-		if !seen[m[1]] {
-			seen[m[1]] = true
-			fields = append(fields, client.FieldInput{Key: m[1], Value: m[2]})
-		}
-	}
-	return fields
 }
 
 // --- Output formatters ---
@@ -374,21 +286,3 @@ func formatModels(r *client.ModelsResponse) string {
 	return sb.String()
 }
 
-func formatCreatedItem(item *client.VersionedItem) string {
-	var sb strings.Builder
-	sb.WriteString(fmt.Sprintf("%s%sItem created!%s\n\n", colorGreen, colorBold, colorReset))
-	sb.WriteString(fmt.Sprintf("  ID:       %s\n", item.ID))
-	if item.Version != "" {
-		sb.WriteString(fmt.Sprintf("  Version:  %s\n", item.Version))
-	}
-	if len(item.Refs) > 0 {
-		sb.WriteString(fmt.Sprintf("  Status:   %s\n", statusBadge(item.Refs[0])))
-	}
-	if len(item.Fields) > 0 {
-		sb.WriteString("\n  Fields:\n")
-		for _, f := range item.Fields {
-			sb.WriteString(fmt.Sprintf("    %-20s %v\n", fieldLabel(f)+":", f.Value))
-		}
-	}
-	return sb.String()
-}
